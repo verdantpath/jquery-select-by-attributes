@@ -15,7 +15,8 @@
   // $('a[title!="asdf"]').addClass('selected'); //selects all a's with a title that doesn't match the value specified
   // $('a[title^="Go"]').addClass('selected'); // selects all a's with a title that start with Go (or whatever value specified)
   // $('a[title$="Google"]').addClass('selected'); // selects all a's with a title that end with Google (or whatever value specified)
-  $('a[title~="to"]').addClass('selected'); // selects all a's with a title that contains "to" (to will match, top will not, must have a space on either side)
+  // $('a[title~="to"]').addClass('selected'); // selects all a's with a title that contains "to" (to will match, top will not, must have a space on either side)
+  $('a[href][title]').addClass('selected'); // combine attribute selectors to select all a's with both an href and a title
 </script>
 </body>
 </html>

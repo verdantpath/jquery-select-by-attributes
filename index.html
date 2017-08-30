@@ -7,9 +7,15 @@
 </head>
 <body>
 <p><a href="https://www.google.com">Click me!</a></p>
+<p><a href="https://www.google.com" title="Go to Google">Click me!</a></p>
 <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/Javascript">
-  $('a[href="https://www.google.com"]').addClass('selected');
+  // $('a[href="https://www.google.com"]').addClass('selected'); // selects all a's with the href specified, using the attribute selector
+  // $('a[title]').addClass('selected'); // selects all a's with a title attribute
+  // $('a[title!="asdf"]').addClass('selected'); //selects all a's with a title that doesn't match the value specified
+  // $('a[title^="Go"]').addClass('selected'); // selects all a's with a title that start with Go (or whatever value specified)
+  // $('a[title$="Google"]').addClass('selected'); // selects all a's with a title that end with Google (or whatever value specified)
+  $('a[title~="to"]').addClass('selected'); // selects all a's with a title that contains "to" (to will match, top will not, must have a space on either side)
 </script>
 </body>
 </html>
